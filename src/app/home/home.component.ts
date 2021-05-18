@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   storedTheme: string = localStorage.getItem('theme-color');
 
   ngOnInit(): void {
-    if(!this.storedTheme) {
+    if (!this.storedTheme) {
       localStorage.setItem('theme-color', 'theme-one');
       this.storedTheme = localStorage.getItem('theme-color');
     }
@@ -33,8 +33,8 @@ export class HomeComponent implements OnInit {
 
   onClickDel() {
     var str = (<HTMLInputElement>document.getElementById('operazioni')).value;
-    var res = str.substring( 0, str.length -1 );
-    (<HTMLInputElement>document.getElementById('operazioni')).value=res;
+    var res = str.substring(0, str.length - 1);
+    (<HTMLInputElement>document.getElementById('operazioni')).value = res;
   }
 
   onClickReset() {
@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
   }
 
   onClickSame() {
-    (<HTMLInputElement>document.getElementById('operazioni')).value=eval((<HTMLInputElement>document.getElementById("operazioni")).value);
+    (<HTMLInputElement>document.getElementById('operazioni')).value = eval((<HTMLInputElement>document.getElementById("operazioni")).value);
   }
 
 
