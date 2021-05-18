@@ -11,7 +11,6 @@ export class HomeComponent implements OnInit {
   storedTheme: string = localStorage.getItem('theme-color');
 
   ngOnInit(): void {
-
     if(!this.storedTheme) {
       localStorage.setItem('theme-color', 'theme-one');
       this.storedTheme = localStorage.getItem('theme-color');

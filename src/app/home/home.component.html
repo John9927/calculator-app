@@ -1,65 +1,59 @@
 <div class="container__calc {{storedTheme}}">
-  <div style="display: flex; width: 350px; margin: auto; border-radius: 8px; flex-direction: column;">
-  <!-- Header -->
+  <div class="container__card__calc">
+    <!-- Header -->
 
-  <div class="container__header__calc">
-    <div class="header__calc">
-      <span class="header__title__calc">calc</span>
-      <span class="header__theme">
-        <span id="theme-one" (click)="setTheme('theme-one')">uno</span>
-        <span id="theme-two" (click)="setTheme('theme-two')">due</span>
-        <span id="theme-three" (click)="setTheme('theme-three')">Tre</span>
+    <div class="container__header__calc">
+      <div class="header__calc">
+        <span class="header__title__calc">calc</span>
+        <span class="header__theme">
+          <span id="theme-one" (click)="setTheme('theme-one')">uno</span>
+          <span id="theme-two" (click)="setTheme('theme-two')">due</span>
+          <span id="theme-three" (click)="setTheme('theme-three')">Tre</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Display -->
+    <div class="container__display">
+      <span class="display">
+        399,981
       </span>
     </div>
-  </div>
 
-  <!-- Display -->
-  <div class="container__display">
-    <span class="display">
-      399,981
-    </span>
-  </div>
+    <!-- Calc -->
+    <div class="container__calculation">
+      <div class="rows">
+        <div class="button__7"><span class="button__item">7</span></div>
+        <div class="button__8"><span class="button__item">8</span></div>
+        <div class="button__9"><span class="button__item">9</span></div>
+        <div class="button__del"><span class="button__item">del</span></div>
+      </div>
 
-  <!-- Calc -->
-  <div class="container__calculation">
-    <div class="rows">
-      <div class="button__7"><span class="button__item">7</span></div>
-      <div class="button__8"><span class="button__item">8</span></div>
-      <div class="button__9"><span class="button__item">9</span></div>
-      <div class="button__del"><span class="button__item">del</span></div>
-    </div>
+      <div class="rows">
+        <div class="button__4"><span class="button__item">4</span></div>
+        <div class="button__5"><span class="button__item">5</span></div>
+        <div class="button__6"><span class="button__item">6</span></div>
+        <div class="button__plus"><span class="button__item">+</span></div>
+      </div>
 
-    <div class="rows">
-      <div class="button__4"><span class="button__item">4</span></div>
-      <div class="button__5"><span class="button__item">5</span></div>
-      <div class="button__6"><span class="button__item">6</span></div>
-      <div class="button__plus"><span class="button__item">+</span></div>
-    </div>
+      <div class="rows">
+        <div class="button__1"><span class="button__item">1</span></div>
+        <div class="button__2"><span class="button__item">2</span></div>
+        <div class="button__3"><span class="button__item">3</span></div>
+        <div class="button__sub"><span class="button__item">-</span></div>
+      </div>
 
-    <div class="rows">
-      <div class="button__1"><span class="button__item">1</span></div>
-      <div class="button__2"><span class="button__item">2</span></div>
-      <div class="button__3"><span class="button__item">3</span></div>
-      <div class="button__sub"><span class="button__item">-</span></div>
-    </div>
+      <div class="rows">
+        <div class="button__dot"><span class="button__item">.</span></div>
+        <div class="button__0"><span class="button__item">0</span></div>
+        <div class="button__slash"><span class="button__item">/</span></div>
+        <div class="button__per"><span class="button__item">x</span></div>
+      </div>
 
-    <div class="rows">
-      <div class="button__dot"><span class="button__item">.</span></div>
-      <div class="button__0"><span class="button__item">0</span></div>
-      <div class="button__slash"><span class="button__item">/</span></div>
-      <div class="button__per"><span class="button__item">x</span></div>
-    </div>
-
-    <div class="rows">
-      <div class="button__reset"><span class="button__item">RESET</span></div>
-      <div class="button__same"><span class="button__item">=</span></div>
+      <div class="rows">
+        <div class="button__reset"><span class="button__item">RESET</span></div>
+        <div class="button__same"><span class="button__item">=</span></div>
+      </div>
     </div>
   </div>
-
-
 </div>
-</div>
-
-
-
-

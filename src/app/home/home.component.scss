@@ -6,6 +6,14 @@
   width: 100%;
 }
 
+.container__card__calc {
+  display: flex;
+  width: 350px;
+  margin: auto;
+  border-radius: 8px;
+  flex-direction: column;
+}
+
 // Header
 
 .container__header__calc {
@@ -63,10 +71,9 @@
 .rows {
   display: flex;
   width: 88%;
-  margin: 20px auto 1px auto;
+  margin: 20px auto -2px auto;
   justify-content: space-between;
 }
-
 
 
 .button__item {
@@ -305,4 +312,19 @@
     border-bottom: 3px solid var(--key-shadow-cyan-3);
   }
 
+}
+
+
+@media screen and (max-width: 400px) {
+  .container__card__calc {
+    width: 90%;
+  }
+
+  .button__reset {
+    width: 48%;
+  }
+
+  .button__same {
+    width: 48%;
+  }
 }
