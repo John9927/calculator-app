@@ -1,16 +1,15 @@
+// Container
 
-#container__calc {
+.container__calc {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  background: hsl(222, 26%, 31%);
   height: 100vh;
+  width: 100%;
 }
 
 // Header
+
 .container__header__calc {
   display: flex;
-
 }
 
 .header__calc {
@@ -32,15 +31,13 @@
   display: flex;
 }
 
-
 // Display
 
 .container__display {
   display: flex;
   width: 100%;
   margin-top: 15px;
-  background: hsl(224, 36%, 15%);
-  height: 60px;
+  height: 85px;
   border-radius: 8px;
 }
 
@@ -49,16 +46,162 @@
   width: 97%;
   justify-content: flex-end;
   align-items: center;
-  color: white;
   font-size: 28px;
 }
+
 
 // Calc
 .container__calculation {
   display: flex;
   width: 100%;
-  background: hsl(224, 36%, 15%);
   height: 300px;
   margin-top: 15px;
   border-radius: 8px;
+  flex-direction: column;
+}
+
+.rows {
+  display: flex;
+  width: 90%;
+  margin: 20px auto 1px auto;
+  justify-content: space-between;
+}
+
+
+.button__item {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+.button__dot,
+.button__0,
+.button__slash,
+.button__per,
+.button__1,
+.button__2,
+.button__3,
+.button__sub,
+.button__4,
+.button__5,
+.button__6,
+.button__plus,
+.button__7,
+.button__8,
+.button__9 {
+  display: flex;
+  width: 55px;
+  height: 35px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button__del {
+  display: flex;
+  width: 55px;
+  text-transform: uppercase;
+  height: 35px;
+  font-size: 13px !important;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
+// Theme 1
+.container__calc.theme-one {
+  background: var(--main-background-1);
+  color: var(--white);
+  transition: 400ms;
+
+  // Display
+  .container__display {
+    background: var(--screen-background-1);
+  }
+
+  .display {
+    color: var(--white);
+  }
+
+  // Calc
+  .container__calculation {
+    background: var(--screen-background-1);
+  }
+
+  .button__dot,
+  .button__0,
+  .button__slash,
+  .button__per,
+  .button__1,
+  .button__2,
+  .button__3,
+  .button__sub,
+  .button__4,
+  .button__5,
+  .button__6,
+  .button__plus,
+  .button__7,
+  .button__8,
+  .button__9 {
+    background: var(--key-background-orange);
+    border-bottom: 3px solid var(--key-shadow-orange);
+    color: var(--very-dark-grayish-blue);
+  }
+
+  .button__del {
+    color: white;
+    background: var(--key-background-1);
+    border-bottom: 3px solid var(--key-shadow-1);
+  }
+
+}
+
+// Theme 2
+.container__calc.theme-two {
+  background: var(--main-background-2);
+  color: var(--very-dark-grayish-yellow);
+  transition: 400ms;
+
+  // Display
+  .container__display {
+    background: var(--screen-background-2);
+  }
+
+  .display {
+    color: var(--very-dark-grayish-yellow);
+  }
+
+  // Calc
+  .container__calculation {
+    background: var(--toggle-background-2);
+  }
+
+  .button__dot,
+  .button__0,
+  .button__slash,
+  .button__per,
+  .button__1,
+  .button__2,
+  .button__3,
+  .button__sub,
+  .button__4,
+  .button__5,
+  .button__6,
+  .button__plus,
+  .button__7,
+  .button__8,
+  .button__9 {
+    background: var(--key-background-yellow-2);
+    border-bottom: 3px solid var(--key-shadow-yellow-2);
+    color: var(--very-dark-grayish-yellow);
+  }
+
+  .button__del {
+    color: white;
+    background: var(--key-background-2);
+    border-bottom: 3px solid var(--key-shadow-2);
+  }
+
 }

@@ -1,4 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  // Theme 1
+
+  // Backgrounds
+  --main-background-1: hsl(222, 26%, 31%);
+  --toggle-background-1: hsl(223, 31%, 20%);
+  --screen-background-1: hsl(224, 36%, 15%);
+
+  // Keys
+  --key-background-1: hsl(225, 21%, 49%);
+  --key-shadow-1: hsl(224, 28%, 35%);
+  --key-background-toggle-1: hsl(6, 63%, 50%);
+  --key-shadow-red-1: hsl(6, 70%, 34%);
+  --key-background-orange: hsl(30, 25%, 89%);
+  --key-shadow-orange: hsl(28, 16%, 65%);
+
+  // Text
+  --very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --white: white;
+
+  // Theme 2
+
+  // Backgrounds
+  --main-background-2:hsl(0, 0%, 90%) ;
+  --toggle-background-2: hsl(0, 5%, 81%);
+  --screen-background-2: hsl(0, 0%, 93%);
+
+  // Keys
+  --key-background-2: hsl(185, 42%, 37%);
+  --key-shadow-2: hsl(185, 58%, 25%);
+  --key-background-yellow-2: hsl(45, 7%, 89%);
+  --key-shadow-yellow-2: hsl(35, 11%, 61%);
+  --key-background-orange-2: hsl(25, 98%, 40%);
+  --key-shadow-orange-2: hsl(25, 99%, 27%);
+
+  // Text
+  --very-dark-grayish-yellow: hsl(60, 10%, 19%);
+  --white-2: white;
+}
+
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,

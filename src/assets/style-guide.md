@@ -25,6 +25,7 @@ The designs were created to the following widths:
 - Red (key background, toggle): hsl(6, 63%, 50%)
 - Dark red (key shadow): hsl(6, 70%, 34%)
 
+<!-- colore tasti come 7,8,9,4,5,6,1,2,3 ecc... e lo shadow -->
 - Light grayish orange (key background): hsl(30, 25%, 89%)
 - Grayish orange (key shadow): hsl(28, 16%, 65%)
 

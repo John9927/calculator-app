@@ -8,25 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor() { }
-  active: any;
+  storedTheme: string = localStorage.getItem('theme-color');
+
   ngOnInit(): void {
+
+    if(!this.storedTheme) {
+      localStorage.setItem('theme-color', 'theme-one');
+      this.storedTheme = localStorage.getItem('theme-color');
+    }
   }
 
-  one() {
-    document.getElementById('container__calc').style.background = "hsl(222, 26%, 31%)"
-
+  setTheme(theme) {
+    localStorage.setItem('theme-color', theme);
+    this.storedTheme = localStorage.getItem('theme-color');
   }
 
-
-  two() {
-    document.getElementById('container__calc').style.background = " hsl(0, 0%, 90%)"
-  }
-
-
-  three() {
-    document.getElementById('container__calc').style.background = "hsl(268, 75%, 9%)"
-    document.getElementById('container__calc').style.color = "white"
-
-  }
 
 }
