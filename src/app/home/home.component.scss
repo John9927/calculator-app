@@ -62,10 +62,11 @@
 
 .rows {
   display: flex;
-  width: 90%;
+  width: 88%;
   margin: 20px auto 1px auto;
   justify-content: space-between;
 }
+
 
 
 .button__item {
@@ -109,6 +110,26 @@
   border-radius: 4px;
 }
 
+.button__reset {
+  display: flex;
+  width: 138px;
+  text-transform: uppercase;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 4px;
+  background: red;
+}
+
+.button__same {
+  display: flex;
+  width: 138px;
+  text-transform: uppercase;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 4px;
+  background: red;
+  color: var(--white);
+}
 
 // Theme 1
 .container__calc.theme-one {
@@ -154,6 +175,16 @@
     color: white;
     background: var(--key-background-1);
     border-bottom: 3px solid var(--key-shadow-1);
+  }
+
+  .button__reset {
+    background: var(--key-background-1);
+    border-bottom: 3px solid var(--key-shadow-1);
+  }
+
+  .button__same {
+    background: var(--key-background-toggle-1);
+    border-bottom: 3px solid var(--key-shadow-red-1);
   }
 
 }
@@ -202,6 +233,76 @@
     color: white;
     background: var(--key-background-2);
     border-bottom: 3px solid var(--key-shadow-2);
+  }
+
+  .button__reset {
+    background: var(--key-background-2);
+    border-bottom: 3px solid var(--key-shadow-2);
+  }
+
+  .button__same {
+    background: var(--key-background-toggle-1);
+    border-bottom: 3px solid var(--key-shadow-red-1);
+  }
+
+}
+
+
+
+// Theme 3
+.container__calc.theme-three {
+  background: var(--main-background-3);
+  color: var(--light-yellow-3);
+  transition: 400ms;
+
+  // Display
+  .container__display {
+    background: var(--screen-background-3);
+  }
+
+  .display {
+    color: var(--light-yellow-3);
+  }
+
+  // Calc
+  .container__calculation {
+    background: var(--screen-background-3);
+  }
+
+  .button__dot,
+  .button__0,
+  .button__slash,
+  .button__per,
+  .button__1,
+  .button__2,
+  .button__3,
+  .button__sub,
+  .button__4,
+  .button__5,
+  .button__6,
+  .button__plus,
+  .button__7,
+  .button__8,
+  .button__9 {
+    background: var(--key-background-3);
+    border-bottom: 3px solid var(--key-shadow-3);
+    color: var(--light-yellow-3);
+  }
+
+  .button__del {
+    color: white;
+    background: var(--key-background-3);
+    border-bottom: 3px solid var(--key-shadow-3);
+  }
+
+  .button__reset {
+    background: var(--key-background-3);
+    border-bottom: 3px solid var(--key-shadow-3);
+  }
+
+  .button__same {
+    background: var(--key-background-cyan-3);
+    border-bottom: 3px solid var(--key-shadow-cyan-3);
   }
 
 }
