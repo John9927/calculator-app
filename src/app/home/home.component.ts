@@ -28,11 +28,13 @@ export class HomeComponent implements OnInit {
   // Button
   onClick(id: any) {
     id = (event.target as HTMLInputElement).value;
-    (<HTMLInputElement>document.getElementById('operazioni')).value += id;
+    this.prova = (<HTMLInputElement>document.getElementById('operazioni')).value += id;
   }
 
-  onClickDel(id: any) {
-    (<HTMLInputElement>document.getElementById('operazioni')).value.slice(0, -1);
+  onClickDel() {
+    var str = (<HTMLInputElement>document.getElementById('operazioni')).value;
+    var res = str.substring( 0, str.length -1 );
+    (<HTMLInputElement>document.getElementById('operazioni')).value=res;
   }
 
   onClickReset() {

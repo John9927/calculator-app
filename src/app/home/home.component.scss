@@ -186,22 +186,42 @@ input {
     background: var(--key-background-orange);
     border-bottom: 3px solid var(--key-shadow-orange);
     color: var(--very-dark-grayish-blue);
+    transition: 300ms;
+
+    &:hover {
+      background: var(--key-shadow-orange);
+    }
   }
 
   .button__del {
     color: white;
     background: var(--key-background-1);
     border-bottom: 3px solid var(--key-shadow-1);
+    transition: 300ms;
+
+    &:hover {
+    background: var(--key-shadow-1);
+    }
   }
 
   .button__reset {
     background: var(--key-background-1);
     border-bottom: 3px solid var(--key-shadow-1);
+    transition: 300ms;
+
+    &:hover {
+      background: var(--key-shadow-1);
+    }
   }
 
   .button__same {
     background: var(--key-background-toggle-1);
     border-bottom: 3px solid var(--key-shadow-red-1);
+    transition: 300ms;
+
+    &:hover {
+      background: var(--key-shadow-red-1);
+    }
   }
 }
 
@@ -243,23 +263,43 @@ input {
     background: var(--key-background-yellow-2);
     border-bottom: 3px solid var(--key-shadow-yellow-2);
     color: var(--very-dark-grayish-yellow);
+    transition: 300ms;
+
+    &:hover {
+      background: var(--key-shadow-yellow-2);
+    }
   }
 
   .button__del {
     color: white;
     background: var(--key-background-2);
     border-bottom: 3px solid var(--key-shadow-2);
+    transition: 300ms;
+
+    &:hover {
+      background: var(--key-shadow-2);
+    }
   }
 
   .button__reset {
     background: var(--key-background-2);
     border-bottom: 3px solid var(--key-shadow-2);
+    transition: 300ms;
+
+    &:hover {
+      background: var(--key-shadow-2);
+    }
   }
 
   .button__same {
     background: var(--key-background-toggle-1);
     border-bottom: 3px solid var(--key-shadow-red-1);
     color: var(--white);
+    transition: 300ms;
+
+    &:hover {
+      background: var(--key-shadow-red-1);
+    }
   }
 }
 
@@ -303,12 +343,22 @@ input {
     background: var(--key-background-3);
     border-bottom: 3px solid var(--key-shadow-3);
     color: var(--light-yellow-3);
+    transition: 300ms;
+
+    &:hover {
+      background: var(--key-shadow-3);
+    }
   }
 
   .button__del {
     color: var(--white);
     background: var(--key-background-3);
     border-bottom: 3px solid var(--key-shadow-3);
+    transition: 300ms;
+
+    &:hover {
+      background: var(--key-shadow-3);
+    }
   }
 
   .button__reset {
