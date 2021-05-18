@@ -14,6 +14,17 @@
   flex-direction: column;
 }
 
+input {
+  text-align: right;
+  border: 0;
+  background: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+
 // Header
 
 .container__header__calc {
@@ -82,7 +93,8 @@
   justify-content: center;
   width: 100%;
   font-size: 16px;
-  margin-top: 12px;
+  margin-top: 9px;
+  font-weight: bold;
 }
 
 .button__dot,
@@ -124,7 +136,7 @@
   height: 35px;
   cursor: pointer;
   border-radius: 4px;
-  background: red;
+  color: var(--white);
 }
 
 .button__same {
@@ -134,8 +146,6 @@
   height: 35px;
   cursor: pointer;
   border-radius: 4px;
-  background: red;
-  color: var(--white);
 }
 
 // Theme 1
@@ -193,7 +203,6 @@
     background: var(--key-background-toggle-1);
     border-bottom: 3px solid var(--key-shadow-red-1);
   }
-
 }
 
 // Theme 2
@@ -250,8 +259,8 @@
   .button__same {
     background: var(--key-background-toggle-1);
     border-bottom: 3px solid var(--key-shadow-red-1);
+    color: var(--white);
   }
-
 }
 
 
@@ -297,7 +306,7 @@
   }
 
   .button__del {
-    color: white;
+    color: var(--white);
     background: var(--key-background-3);
     border-bottom: 3px solid var(--key-shadow-3);
   }
@@ -310,8 +319,8 @@
   .button__same {
     background: var(--key-background-cyan-3);
     border-bottom: 3px solid var(--key-shadow-cyan-3);
+    color: black;
   }
-
 }
 
 

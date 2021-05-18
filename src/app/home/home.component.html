@@ -6,8 +6,8 @@
       <div class="header__calc">
         <span class="header__title__calc">calc</span>
         <span class="header__theme">
-          <span id="theme-one" (click)="setTheme('theme-one')">uno</span>
-          <span id="theme-two" (click)="setTheme('theme-two')">due</span>
+          <span id="theme-one" (click)="setTheme('theme-one')">Uno</span>
+          <span id="theme-two" (click)="setTheme('theme-two')">Due</span>
           <span id="theme-three" (click)="setTheme('theme-three')">Tre</span>
         </span>
       </div>
@@ -15,44 +15,78 @@
 
     <!-- Display -->
     <div class="container__display">
-      <span class="display">
-        399,981
-      </span>
+      <input type="text" name="display" id="operazioni" readonly="readonly" class="display">
     </div>
 
     <!-- Calc -->
     <div class="container__calculation">
       <div class="rows">
-        <div class="button__7"><span class="button__item">7</span></div>
-        <div class="button__8"><span class="button__item">8</span></div>
-        <div class="button__9"><span class="button__item">9</span></div>
-        <div class="button__del"><span class="button__item">del</span></div>
+        <div class="button__7">
+          <input type="submit" id="7" value="7" (click)="onClick($event)" class="button__item">
+        </div>
+        <div class="button__8">
+          <input type="submit" id="8" value="8" (click)="onClick($event)" class="button__item">
+        </div>
+        <div class="button__9">
+          <input type="submit" id="9" value="9" (click)="onClick($event)" class="button__item">
+        </div>
+        <div class="button__del">
+          <input type="submit" id="del" value="del" (click)="onClickDel($event)" class="button__item">
+        </div>
       </div>
 
       <div class="rows">
-        <div class="button__4"><span class="button__item">4</span></div>
-        <div class="button__5"><span class="button__item">5</span></div>
-        <div class="button__6"><span class="button__item">6</span></div>
-        <div class="button__plus"><span class="button__item">+</span></div>
+        <div class="button__4">
+          <input type="submit" id="4" value="4" (click)="onClick($event)" class="button__item">
+        </div>
+        <div class="button__5">
+          <input type="submit" id="5" value="5" (click)="onClick($event)" class="button__item">
+        </div>
+        <div class="button__6">
+          <input type="submit" id="6" value="6" (click)="onClick($event)" class="button__item">
+        </div>
+        <div class="button__plus">
+          <input type="submit" id="+" value="+" (click)="onClick($event)" class="button__item">
+        </div>
       </div>
 
       <div class="rows">
-        <div class="button__1"><span class="button__item">1</span></div>
-        <div class="button__2"><span class="button__item">2</span></div>
-        <div class="button__3"><span class="button__item">3</span></div>
-        <div class="button__sub"><span class="button__item">-</span></div>
+        <div class="button__1">
+          <input type="submit" id="1" value="1" (click)="onClick($event)" class="button__item">
+        </div>
+        <div class="button__2">
+          <input type="submit" id="2" value="2" (click)="onClick($event)" class="button__item">
+        </div>
+        <div class="button__3">
+          <input type="submit" id="3" value="3" (click)="onClick($event)" class="button__item">
+        </div>
+        <div class="button__sub">
+          <input type="submit" id="-" value="-" (click)="onClick($event)" class="button__item">
+        </div>
       </div>
 
       <div class="rows">
-        <div class="button__dot"><span class="button__item">.</span></div>
-        <div class="button__0"><span class="button__item">0</span></div>
-        <div class="button__slash"><span class="button__item">/</span></div>
-        <div class="button__per"><span class="button__item">x</span></div>
+        <div class="button__dot">
+          <input type="submit" id="." value="." (click)="onClick($event)" class="button__item">
+        </div>
+        <div class="button__0">
+          <input type="submit" id="0" value="0" (click)="onClick($event)" class="button__item">
+        </div>
+        <div class="button__slash">
+          <input type="submit" id="/" value="/" (click)="onClick($event)" class="button__item">
+        </div>
+        <div class="button__per">
+          <input type="submit" id="*" value="*" (click)="onClick($event)" class="button__item">
+        </div>
       </div>
 
       <div class="rows">
-        <div class="button__reset"><span class="button__item">RESET</span></div>
-        <div class="button__same"><span class="button__item">=</span></div>
+        <div class="button__reset">
+          <input type="submit" id="reset" value="reset" (click)="onClickReset()" class="button__item">
+        </div>
+        <div class="button__same">
+          <input type="submit" id="=" value="=" (click)="onClickSame()" class="button__item">
+        </div>
       </div>
     </div>
   </div>
