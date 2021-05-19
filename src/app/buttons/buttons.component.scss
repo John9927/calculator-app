@@ -179,3 +179,17 @@ input[type="text"] {
   }
 }
 
+
+@media screen and (max-width: 400px) {
+  .container__card__calc {
+    width: 90%;
+  }
+
+  .button__reset {
+    width: 48%;
+  }
+
+  .button__same {
+    width: 48%;
+  }
+}

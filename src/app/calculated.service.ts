@@ -18,17 +18,6 @@ export class CalculatedService {
     this.themeThree();
   }
 
-  themeTwo() {
-    if(this.storedTheme == 'theme-two') {
-      var del = document.getElementById("delete");
-      var reset = document.getElementById("reset");
-      del.style.background = "var(--key-background-2)";
-      del.style.borderBottom = "3px solid var(--key-shadow-2)";
-      reset.style.background = "var(--key-background-2)";
-      reset.style.borderBottom = "3px solid var(--key-shadow-2)";
-    }
-  }
-
   themeOne() {
     if (this.storedTheme == 'theme-one') {
       var del = document.getElementById("delete");
@@ -37,6 +26,17 @@ export class CalculatedService {
       del.style.borderBottom = "3px solid var(--key-shadow-1)";
       reset.style.background = "var(--key-background-1)";
       reset.style.borderBottom = "3px solid var(--key-shadow-1)";
+    }
+  }
+
+  themeTwo() {
+    if(this.storedTheme == 'theme-two') {
+      var del = document.getElementById("delete");
+      var reset = document.getElementById("reset");
+      del.style.background = "var(--key-background-2)";
+      del.style.borderBottom = "3px solid var(--key-shadow-2)";
+      reset.style.background = "var(--key-background-2)";
+      reset.style.borderBottom = "3px solid var(--key-shadow-2)";
     }
   }
 

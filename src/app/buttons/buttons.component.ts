@@ -38,3 +38,4 @@ export class ButtonsComponent implements OnInit {
     this.onClicksSame.emit();
   }
 }
+
