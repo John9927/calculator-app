@@ -6,7 +6,6 @@ import { Injectable } from '@angular/core';
 export class CalculatedService {
 
   storedTheme: string = localStorage.getItem('theme-color');
-
   constructor() { }
 
   setTheme(theme: string) {

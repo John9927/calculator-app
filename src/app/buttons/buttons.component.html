@@ -9,7 +9,7 @@
     <input type="submit" id="id" value="9" (click)="onClick($event)" class="button__item">
   </div>
   <div class="button__del" id="delete">
-    <input type="submit" value="del" id="id" (click)="onClickDel()" class="button__del__span">
+    <input type="submit" value="del" #delete id="id" (click)="onClickDel()" class="button__del__span">
   </div>
 </div>
 
@@ -60,7 +60,7 @@
 
 <div class="rows">
   <div class="button__reset" id="reset">
-    <input type="submit" id="id" value="reset" (click)="onClickReset()" class="button__reset__span">
+    <input type="submit" id="id" value="reset" #reset (click)="onClickReset()" class="button__reset__span">
   </div>
   <div class="button__same">
     <input type="submit" id="id" value="=" (click)="onClickSame()" class="button__item">
