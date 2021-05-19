@@ -1,0 +1,17 @@
+<div class="toggle3-switch">
+  <input type="radio" id="toggle3radio1" class=radio1 name="toggle3" />
+  <input type="radio" id="toggle3radio2" class=radio2 name="toggle3" />
+  <input type="radio" id="toggle3radio3" class=radio3 name="toggle3" />
+  <div class=topLabelContainer>
+    <label class=labelTop1 for="toggle3radio1" id="themeOne" (click)="calculatedService.setTheme('theme-one')">1</label>
+    <label class=labelTop2 for="toggle3radio2" (click)="calculatedService.setTheme('theme-two')">2</label>
+    <label class=labelTop3 for="toggle3radio3" (click)="calculatedService.setTheme('theme-three')">3</label>
+  </div>
+  <span class=sliderContainer>
+    <span style="display: flex; margin: 20px 0px 0px -170px;">THEME</span>
+    <label class="label1" for="toggle3radio1" (click)="calculatedService.setTheme('theme-one')"></label>
+    <label class="label2" for="toggle3radio2" (click)="calculatedService.setTheme('theme-two')"></label>
+    <label class="label3" for="toggle3radio3" (click)="calculatedService.setTheme('theme-three')"></label>
+    <span class="slider"></span>
+  </span>
+</div>

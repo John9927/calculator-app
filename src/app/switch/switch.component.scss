@@ -1,0 +1,151 @@
+// Toggle
+
+.toggle3-switch {
+  display: flex;
+  position: relative;
+  text-align: center;
+  font-size: 2em;
+  flex-direction: column;
+  zoom: 24%;
+  margin-top: -41px;
+}
+.radio1,
+.radio2,
+.radio3 {
+  position: absolute;
+  left: -9999px;
+}
+.topLabelContainer {
+  display: flex;
+}
+.labelTop1,
+.labelTop2,
+.labelTop3 {
+  width: 2em;
+  margin: auto;
+  padding: 0 1px 0 1px;
+  display: inline-block;
+  text-align: center;
+}
+.labelLeft {
+  width: 6em;
+  height: 3em;
+  padding-right: 0.5em;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+}
+.sliderContainer {
+  height: 2em;
+  width: 6em;
+  margin: 2px auto;
+  position: relative;
+  padding: 2px;
+  display: inline-block;
+}
+
+.label1,
+.label2,
+.label3 {
+  height: 100%;
+  width: 100%;
+  padding: 2px;
+  position: absolute;
+  border-radius: 40px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(200, 200, 200);
+}
+.radio1:checked ~ span .label1,
+.radio1:checked ~ span .label3,
+.radio2:checked ~ span .label1,
+.radio2:checked ~ span .label2,
+.radio3:checked ~ span .label2,
+.radio3:checked ~ span .label3 {
+  position: absolute;
+  left: -9999px;
+}
+.slider {
+  width: 2em;
+  height: 2em;
+  margin: 4px;
+  position: absolute;
+  display: inline-block;
+  pointer-events: none;
+  border-radius: 50%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(100, 100, 100);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.radio2:checked ~ span .slider {
+  -webkit-transform: translateX(2em);
+  -ms-transform: translateX(2em);
+  transform: translateX(2em);
+}
+
+.radio3:checked ~ span .slider {
+  -webkit-transform: translateX(4em);
+  -ms-transform: translateX(4em);
+  transform: translateX(4em);
+}
+
+.content1 {
+  height: 4em;
+  width: 100%;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 1em;
+  text-align: center;
+  font-size: 1.3em;
+  background: beige;
+}
+.content1 p {
+  margin: 0;
+}
+
+.labelTop1,
+.radio1:checked ~ .sliderContainer .slider,
+.radio1:checked ~ .content1 {
+  color: var(--key-background-toggle-1);
+}
+.radio1:checked ~ .topLabelContainer .labelTop1 {
+  color: white;
+  text-shadow: 0 0 1px rgb(255, 100, 100),
+    0 0 8px var(--key-background-toggle-1);
+}
+.radio1:checked ~ .sliderContainer .slider {
+  background: var(--key-background-toggle-1);
+}
+
+.labelTop2,
+.radio2:checked ~ .content1 {
+  color: var(--key-background-toggle-1);
+}
+.radio2:checked ~ .topLabelContainer .labelTop2 {
+  color: white;
+  text-shadow: 0 0 1px rgb(255, 50, 255), 0 0 6px var(--key-background-toggle-1);
+}
+.radio2:checked ~ .sliderContainer .slider {
+  background: var(--key-background-toggle-1);
+}
+
+.labelTop3,
+.radio3:checked ~ .content1 {
+  color: var(--key-background-3);
+}
+.radio3:checked ~ .topLabelContainer .labelTop3 {
+  color: white;
+  text-shadow: 0 0 1px rgb(100, 100, 255), 0 0 8px var(--key-background-3);
+}
+.radio3:checked ~ .sliderContainer .slider {
+  background: var(--key-background-3);
+}

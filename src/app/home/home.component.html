@@ -1,93 +1,20 @@
-<div class="container__calc {{storedTheme}}">
+<div class="container__calc {{calculatedService.storedTheme}}">
   <div class="container__card__calc">
     <!-- Header -->
-
     <div class="container__header__calc">
       <div class="header__calc">
         <span class="header__title__calc">calc</span>
-        <span class="header__theme">
-          <span id="theme-one" (click)="setTheme('theme-one')">Uno</span>
-          <span id="theme-two" (click)="setTheme('theme-two')">Due</span>
-          <span id="theme-three" (click)="setTheme('theme-three')">Tre</span>
-        </span>
+        <!-- Switch -->
+        <app-switch></app-switch>
       </div>
-    </div>
-
-    <!-- Display -->
-    <div class="container__display">
-      <input type="text" name="display" id="operazioni" readonly="readonly" class="display">
-    </div>
-
-    <!-- Calc -->
-    <div class="container__calculation">
-      <div class="rows">
-        <div class="button__7">
-          <input type="submit" id="7" value="7" (click)="onClick($event)" class="button__item">
-        </div>
-        <div class="button__8">
-          <input type="submit" id="8" value="8" (click)="onClick($event)" class="button__item">
-        </div>
-        <div class="button__9">
-          <input type="submit" id="9" value="9" (click)="onClick($event)" class="button__item">
-        </div>
-        <div class="button__del">
-          <input type="submit" id="del" value="del" (click)="onClickDel()" class="button__del__span">
-        </div>
+      <!-- Display -->
+      <div class="container__display" #operazione>
       </div>
 
-      <div class="rows">
-        <div class="button__4">
-          <input type="submit" id="4" value="4" (click)="onClick($event)" class="button__item">
-        </div>
-        <div class="button__5">
-          <input type="submit" id="5" value="5" (click)="onClick($event)" class="button__item">
-        </div>
-        <div class="button__6">
-          <input type="submit" id="6" value="6" (click)="onClick($event)" class="button__item">
-        </div>
-        <div class="button__plus">
-          <input type="submit" id="+" value="+" (click)="onClick($event)" class="button__item">
-        </div>
-      </div>
-
-      <div class="rows">
-        <div class="button__1">
-          <input type="submit" id="1" value="1" (click)="onClick($event)" class="button__item">
-        </div>
-        <div class="button__2">
-          <input type="submit" id="2" value="2" (click)="onClick($event)" class="button__item">
-        </div>
-        <div class="button__3">
-          <input type="submit" id="3" value="3" (click)="onClick($event)" class="button__item">
-        </div>
-        <div class="button__sub">
-          <input type="submit" id="-" value="-" (click)="onClick($event)" class="button__item">
-        </div>
-      </div>
-
-      <div class="rows">
-        <div class="button__dot">
-          <input type="submit" id="." value="." (click)="onClick($event)" class="button__item">
-        </div>
-        <div class="button__0">
-          <input type="submit" id="0" value="0" (click)="onClick($event)" class="button__item">
-        </div>
-        <div class="button__slash">
-          <input type="submit" id="/" value="/" (click)="onClick($event)" class="button__item">
-        </div>
-        <div class="button__per">
-          <input type="submit" id="*" value="*" (click)="onClick($event)" class="button__item">
-        </div>
-      </div>
-
-      <div class="rows">
-        <div class="button__reset">
-          <input type="submit" id="reset" value="reset" (click)="onClickReset()" class="button__reset__span">
-        </div>
-        <div class="button__same">
-          <input type="submit" id="=" value="=" (click)="onClickSame()" class="button__item">
-        </div>
+      <!-- Calc -->
+      <div class="container__calculation">
+        <app-buttons (onClicks)="onClick(id)" (onClicksDel)="onClickDel()" (onClicksReset)="onClickReset()"
+          (onClicksSame)="onClickSame()"></app-buttons>
       </div>
     </div>
   </div>
-</div>

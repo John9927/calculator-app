@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { CalculatedService } from './../calculated.service';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,45 +8,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public calculatedService: CalculatedService) { }
   display: any = [];
-  prova: any;
   id: any;
-  storedTheme: string = localStorage.getItem('theme-color');
+
+  @ViewChild('operazione') operazione: any;
 
   ngOnInit(): void {
-    if (!this.storedTheme) {
+    if (!this.calculatedService.storedTheme) {
       localStorage.setItem('theme-color', 'theme-one');
-      this.storedTheme = localStorage.getItem('theme-color');
+      this.calculatedService.storedTheme = localStorage.getItem('theme-color');
     }
   }
 
   setTheme(theme) {
     localStorage.setItem('theme-color', theme);
-    this.storedTheme = localStorage.getItem('theme-color');
+    this.calculatedService.storedTheme = localStorage.getItem('theme-color');
   }
 
   // Button
   onClick(id: any) {
     id = (event.target as HTMLInputElement).value;
-    this.prova = (<HTMLInputElement>document.getElementById('operazioni')).value += id;
+    this.operazione.nativeElement.innerHTML += id;
   }
 
   onClickDel() {
-    var str = (<HTMLInputElement>document.getElementById('operazioni')).value;
+    var str = this.operazione.nativeElement.innerText;
     var res = str.substring(0, str.length - 1);
-    (<HTMLInputElement>document.getElementById('operazioni')).value = res;
+    this.operazione.nativeElement.innerText = res;
   }
 
   onClickReset() {
-    (<HTMLInputElement>document.getElementById('operazioni')).value = "";
+    this.operazione.nativeElement.innerText = "";
   }
 
   onClickSame() {
-    (<HTMLInputElement>document.getElementById('operazioni')).value = eval((<HTMLInputElement>document.getElementById("operazioni")).value);
+    this.operazione.nativeElement.innerText = eval(this.operazione.nativeElement.innerHTML);
   }
-
-
-
 
 }
