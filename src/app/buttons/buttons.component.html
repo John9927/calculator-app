@@ -1,12 +1,12 @@
 <div class="rows">
   <div class="button">
-    <input type="submit" id="id" value="7" (click)="onClick($event)" class="button__item">
+    <input type="submit" id="id" value="7" (click)="calculatedService.addNumber({type: 'addNumber', value: '7'})" class="button__item">
   </div>
   <div class="button">
-    <input type="submit" id="id" value="8" (click)="onClick($event)" class="button__item">
+    <input type="submit" id="id" value="8" (click)="calculatedService.addNumber({type: 'addNumber', value: '8'})" class="button__item">
   </div>
   <div class="button">
-    <input type="submit" id="id" value="9" (click)="onClick($event)" class="button__item">
+    <input type="submit" id="id" value="9" (click)="calculatedService.addNumber({type: 'addNumber', value: '9'})" class="button__item">
   </div>
   <div class="button__del" id="delete">
     <input type="submit" value="del" #delete id="id" (click)="onClickDel()" class="button__del__span">
@@ -15,54 +15,54 @@
 
 <div class="rows">
   <div class="button">
-    <input type="submit" id="id" value="4" (click)="onClick($event)" class="button__item">
+    <input type="submit" id="id" value="4" (click)="calculatedService.addNumber({type: 'addNumber', value: '4'})" class="button__item">
   </div>
   <div class="button">
-    <input type="submit" id="id" value="5" (click)="onClick($event)" class="button__item">
+    <input type="submit" id="id" value="5" (click)="calculatedService.addNumber({type: 'addNumber', value: '5'})" class="button__item">
   </div>
   <div class="button">
-    <input type="submit" id="id" value="6" (click)="onClick($event)" class="button__item">
+    <input type="submit" id="id" value="6" (click)="calculatedService.addNumber({type: 'addNumber', value: '6'})" class="button__item">
   </div>
-  <div class="button__plus">
-    <input type="submit" id="id" value="+" (click)="onClick($event)" class="button__item">
+  <div class="button__plus"> <!-- button--plus -->
+    <input type="submit" id="id" value="+" (click)="calculatedService.addNumber({type: 'add', value:'-'})" class="button__item">
   </div>
 </div>
 
 <div class="rows">
   <div class="button">
-    <input type="submit" id="id" value="1" (click)="onClick($event)" class="button__item">
+    <input type="submit" id="id" value="1" (click)="calculatedService.addNumber({type: 'addNumber', value: '1'})" class="button__item">
   </div>
   <div class="button">
-    <input type="submit" id="id" value="2" (click)="onClick($event)" class="button__item">
+    <input type="submit" id="id" value="2" (click)="calculatedService.addNumber({type: 'addNumber', value: '2'})" class="button__item">
   </div>
   <div class="button">
-    <input type="submit" id="id" value="3" (click)="onClick($event)" class="button__item">
+    <input type="submit" id="id" value="3" (click)="calculatedService.addNumber({type: 'addNumber', value: '3'})" class="button__item">
   </div>
   <div class="button__sub">
-    <input type="submit" id="id" value="-" (click)="onClick($event)" class="button__item">
+    <input type="submit" id="id" value="-" (click)="calculatedService.addNumber({type: 'sub'})" class="button__item">
   </div>
 </div>
 
 <div class="rows">
   <div class="button__dot">
-    <input type="submit" id="id" value="." (click)="onClick($event)" class="button__item">
+    <input type="submit" id="id" value="." (click)="calculatedService.addNumber({type: 'addNumber', value: '.'})" class="button__item">
   </div>
   <div class="button">
-    <input type="submit" id="id" value="0" (click)="onClick($event)" class="button__item">
+    <input type="submit" id="id" value="0" (click)="calculatedService.addNumber({type: 'addNumber', value: '0'})" class="button__item">
   </div>
   <div class="button__slash">
-    <input type="submit" id="id" value="/" (click)="onClick($event)" class="button__item">
+    <input type="submit" id="id" value="/" (click)="calculatedService.addNumber({type: 'div', value:'/'})" class="button__item">
   </div>
   <div class="button__per">
-    <input type="submit" id="id" value="*" (click)="onClick($event)" class="button__item">
+    <input type="submit" id="id" value="*" (click)="calculatedService.addNumber({type: 'mol', value:'*'})" class="button__item">
   </div>
 </div>
 
 <div class="rows">
   <div class="button__reset" id="reset">
-    <input type="submit" id="id" value="reset" #reset (click)="onClickReset()" class="button__reset__span">
+    <input type="submit" id="id" value="reset" #reset (click)="calculatedService.addNumber({type: 'reset'})" class="button__reset__span">
   </div>
   <div class="button__same">
-    <input type="submit" id="id" value="=" (click)="onClickSame()" class="button__item">
+    <input type="submit" id="id" value="=" (click)="calculatedService.addNumber({type: 'do'})" class="button__item">
   </div>
 </div>

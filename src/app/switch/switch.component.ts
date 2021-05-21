@@ -20,6 +20,4 @@ export class SwitchComponent implements AfterViewInit {
       this.theme.nativeElement.setAttribute("style", "background: var(--key-background-3)")
     }
   }
-
-
 }

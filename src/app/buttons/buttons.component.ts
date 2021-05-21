@@ -15,11 +15,11 @@ export class ButtonsComponent implements OnInit {
 
 
   constructor(public calculatedService: CalculatedService) { }
-
   ngOnInit(): void {
-    if (this.calculatedService.storedTheme) {
-      this.calculatedService.storedTheme = localStorage.getItem('theme-color');
-    }
+
+    // if (this.calculatedService.storedTheme) {
+    //   this.calculatedService.storedTheme = localStorage.getItem('theme-color');
+    // }
   }
 
   onClick(id: string) {

@@ -9,7 +9,7 @@
       </div>
       <!-- Display -->
       <div class="container__display">
-        <span class="display" #operazione></span>
+        <span class="display">{{calculatedService.results}}</span>
       </div>
       <!-- Calc -->
       <div class="container__calculation">
@@ -18,3 +18,22 @@
       </div>
     </div>
   </div>
+
+
+  <div style="display: flex; flex-direction: column;">
+    {{calculatedService.state$ | async | json}}
+
+    <button class="button" (click)="calculatedService.addNumber({type: 'addNumber', value: 1})">
+      addNumber
+    </button>
+    <button class="button" (click)="calculatedService.addNumber({type: 'add',value: 1})">
+      addOperation
+    </button>
+    <button class="button" (click)="calculatedService.doOperation({type: 'do'})">
+      Same
+    </button>
+  </div>
+
+
+
+

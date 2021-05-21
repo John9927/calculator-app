@@ -1,4 +1,4 @@
-import { CalculatedService } from './../calculated.service';
+import { CalculatedService, Action } from './../calculated.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
@@ -7,18 +7,22 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor(public calculatedService: CalculatedService) { }
   display: any = [];
   id: any;
+  action: Action;
 
   @ViewChild('operazione') operazione: any;
 
+  constructor(public calculatedService: CalculatedService) {}
+
   ngOnInit(): void {
+
     if (!this.calculatedService.storedTheme) {
       localStorage.setItem('theme-color', 'theme-one');
       this.calculatedService.storedTheme = localStorage.getItem('theme-color');
     }
+
+    console.log(this.calculatedService.state$)
   }
 
   setTheme(theme) {
