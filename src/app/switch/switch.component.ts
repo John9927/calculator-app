@@ -12,12 +12,14 @@ export class SwitchComponent implements AfterViewInit {
   constructor(public calculatedService: CalculatedService) { }
 
   ngAfterViewInit() {
-    if(this.calculatedService.storedTheme == "theme-one") {
-      this.theme.nativeElement.setAttribute("style", "background: var(--key-background-toggle-1)")
-    } else if(this.calculatedService.storedTheme == "theme-two") {
-      this.theme.nativeElement.setAttribute("style", "background: var(--key-background-toggle-1)")
-    } else if(this.calculatedService.storedTheme == "theme-three") {
-      this.theme.nativeElement.setAttribute("style", "background: var(--key-background-3)")
-    }
+    setInterval(() => {
+      if(this.calculatedService.storedTheme == "theme-one") {
+        this.theme.nativeElement.setAttribute("style", "background: var(--key-background-toggle-1)")
+      } else if(this.calculatedService.storedTheme == "theme-two") {
+        this.theme.nativeElement.setAttribute("style", "background: var(--key-background-toggle-1)")
+      } else if(this.calculatedService.storedTheme == "theme-three") {
+        this.theme.nativeElement.setAttribute("style", "background: var(--key-background-3)")
+      }
+    })
   }
 }

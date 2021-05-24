@@ -10,8 +10,6 @@ export class HomeComponent implements OnInit {
   constructor(public calculatedService: CalculatedService) {}
 
   ngOnInit(): void {
-
-
     if (!this.calculatedService.storedTheme) {
       localStorage.setItem('theme-color', 'theme-one');
       this.calculatedService.storedTheme = localStorage.getItem('theme-color');

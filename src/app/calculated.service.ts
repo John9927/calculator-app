@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Component } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { distinctUntilChanged, pluck, scan, shareReplay, startWith } from 'rxjs/operators';
 
@@ -85,6 +85,28 @@ export class CalculatedService {
               result: null
             };
           }
+          case 'del': {
+            if(state.result) {
+              let result = state.result?.toString();
+              let leng= result.length;
+              let risultato = result.substr(0, leng -1);
+              return {
+                ...state,
+                result: risultato
+              }
+            } else {
+              let number0 = state.numbers[0].length;
+              let number1 = state.numbers[1].length;
+              let ris1 = state.numbers[0].substr(0, number0 - 1);
+              let ris2 = state.numbers[1].substr(0, number1 - 1);
+              let risultato = ris1;
+              let risultato2 = ris2
+              return {
+                ...state,
+                numbers: [risultato, risultato2]
+              }
+            }
+          }
           case 'do': {
             let result = null;
 
@@ -130,8 +152,4 @@ export class CalculatedService {
       pluck('result')
     )
   }
-  reset() {
-
-  }
-
 }
