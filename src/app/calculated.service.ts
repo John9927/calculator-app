@@ -1,6 +1,6 @@
 import { Injectable, Component } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { distinctUntilChanged, pluck, scan, shareReplay, startWith } from 'rxjs/operators';
+import { pluck, scan, shareReplay, startWith } from 'rxjs/operators';
 
 export interface State {
   numbers: [string, string];
@@ -23,7 +23,6 @@ const div = (a: number, b: number) => a / b;
   providedIn: 'root'
 })
 export class CalculatedService {
-
   risultato1: any;
   risultato2: any;
 
@@ -127,14 +126,11 @@ export class CalculatedService {
 
             if (state.operation === '+') {
               result = add(+state.numbers[0], +state.numbers[1]);
-            }
-            if (state.operation === '-') {
+            } else if (state.operation === '-') {
               result = sub(+state.numbers[0], +state.numbers[1]);
-            }
-            if (state.operation === '*') {
+            } else if (state.operation === '*') {
               result = mol(+state.numbers[0], +state.numbers[1]);
-            }
-            if (state.operation === '/') {
+            } else if (state.operation === '/') {
               result = div(+state.numbers[0], +state.numbers[1]);
             }
 
