@@ -24,6 +24,9 @@ const div = (a: number, b: number) => a / b;
 })
 export class CalculatedService {
 
+  risultato1: any;
+  risultato2: any;
+
   storedTheme: string = localStorage.getItem('theme-color');
   setTheme(theme: string) {
     localStorage.setItem('theme-color', theme);
@@ -86,27 +89,39 @@ export class CalculatedService {
             };
           }
           case 'del': {
-            if(state.result) {
+            if (state.result) {
               let result = state.result?.toString();
-              let leng= result.length;
-              let risultato = result.substr(0, leng -1);
+              let leng = result.length;
+              let risultato = result.substr(0, leng - 1);
               return {
                 ...state,
                 result: risultato
               }
-            } else {
+            } else if (!state.result && state.numberIndex === 0) {
               let number0 = state.numbers[0].length;
+              let ris1 = state.numbers[0].slice(0, number0 - 1);
+              this.risultato1 = ris1;
               let number1 = state.numbers[1].length;
-              let ris1 = state.numbers[0].substr(0, number0 - 1);
-              let ris2 = state.numbers[1].substr(0, number1 - 1);
-              let risultato = ris1;
-              let risultato2 = ris2
+              let ris2 = state.numbers[1];
+              this.risultato2 = ris2;
               return {
                 ...state,
-                numbers: [risultato, risultato2]
+                numbers: [this.risultato1, this.risultato2]
               }
+            } else if (!state.result && state.numberIndex === 1) {
+              let number0 = state.numbers[0].length;
+              let ris1 = state.numbers[0];
+              this.risultato1 = ris1;
+              let number1 = state.numbers[1].length;
+              let ris2 = state.numbers[1].slice(0, number1 - 1);
+              this.risultato2 = ris2;
+            }
+            return {
+              ...state,
+              numbers: [this.risultato1, this.risultato2]
             }
           }
+
           case 'do': {
             let result = null;
 
