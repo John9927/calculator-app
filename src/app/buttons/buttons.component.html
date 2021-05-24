@@ -9,7 +9,7 @@
     <input type="submit" id="id" value="9" (click)="calculatedService.addNumber({type: 'addNumber', value: '9'})" class="button__item">
   </div>
   <div class="button__del" id="delete">
-    <input type="submit" value="del" #delete id="id" (click)="onClickDel()" class="button__del__span">
+    <input type="submit" value="del" #delete id="id" class="button__del__span">
   </div>
 </div>
 
@@ -54,15 +54,15 @@
     <input type="submit" id="id" value="/" (click)="calculatedService.addNumber({type: 'div', value:'/'})" class="button__item">
   </div>
   <div class="button__per">
-    <input type="submit" id="id" value="*" (click)="calculatedService.addNumber({type: 'mol', value:'*'})" class="button__item">
+    <input type="submit" value="*" (click)="calculatedService.addNumber({type: 'mol', value:'*'})" class="button__item">
   </div>
 </div>
 
 <div class="rows">
   <div class="button__reset" id="reset">
-    <input type="submit" id="id" value="reset" #reset (click)="calculatedService.addNumber({type: 'reset'})" class="button__reset__span">
+    <input type="submit" value="reset" #reset (click)="calculatedService.addNumber({type: 'reset'})" class="button__reset__span">
   </div>
   <div class="button__same">
-    <input type="submit" id="id" value="=" (click)="calculatedService.addNumber({type: 'do'})" class="button__item">
+    <input type="submit" value="=" (click)="calculatedService.addNumber({type: 'do'})" class="button__item">
   </div>
 </div>

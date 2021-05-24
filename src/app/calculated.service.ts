@@ -23,7 +23,6 @@ const div = (a: number, b: number) => a / b;
   providedIn: 'root'
 })
 export class CalculatedService {
-  results: any;
 
   storedTheme: string = localStorage.getItem('theme-color');
   setTheme(theme: string) {
@@ -33,7 +32,7 @@ export class CalculatedService {
 
   private readonly initialState: State = {
     numbers: ['', ''],
-    operation: null,
+    operation: "",
     numberIndex: 0,
     result: null,
   };
@@ -48,58 +47,58 @@ export class CalculatedService {
           case 'addNumber': {
             const newNumbers = state.numbers;
             newNumbers[state.numberIndex] = newNumbers[state.numberIndex] + action.value;
-            this.results = newNumbers[state.numberIndex];
             return { ...state, numbers: newNumbers };
           }
           case 'sub': {
             return {
               ...state,
               numberIndex: state.numberIndex === 0 ? 1 : 0,
-              operation: 'sub',
+              operation: '-',
             };
           }
           case 'add': {
             return {
               ...state,
               numberIndex: state.numberIndex === 0 ? 1 : 0,
-              operation: 'add',
+              operation: '+',
             };
           }
           case 'mol': {
             return {
               ...state,
               numberIndex: state.numberIndex === 0 ? 1 : 0,
-              operation: 'mol',
+              operation: '*',
             };
           }
           case 'div': {
             return {
               ...state,
               numberIndex: state.numberIndex === 0 ? 1 : 0,
-              operation: 'div',
+              operation: '/',
             };
           }
           case 'reset': {
-            return this.initialState;
+            return {
+              numbers: ['', ''],
+              operation: "",
+              numberIndex: 0,
+              result: null
+            };
           }
           case 'do': {
             let result = null;
 
-            if (state.operation === 'add') {
+            if (state.operation === '+') {
               result = add(+state.numbers[0], +state.numbers[1]);
-              this.results = result;
             }
-            if (state.operation === 'sub') {
+            if (state.operation === '-') {
               result = sub(+state.numbers[0], +state.numbers[1]);
-              this.results = result;
             }
-            if (state.operation === 'mol') {
+            if (state.operation === '*') {
               result = mol(+state.numbers[0], +state.numbers[1]);
-              this.results = result;
             }
-            if (state.operation === 'div') {
+            if (state.operation === '/') {
               result = div(+state.numbers[0], +state.numbers[1]);
-              this.results = result;
             }
 
             return {
@@ -107,7 +106,7 @@ export class CalculatedService {
               numberIndex: 0,
               result,
               numbers: ['', ''],
-              operation: null,
+              operation: "",
             };
           }
           default: {
@@ -128,8 +127,7 @@ export class CalculatedService {
   }
   getResult() {
     return this.state$.pipe(
-      pluck('result'),
-      distinctUntilChanged()
+      pluck('result')
     )
   }
   reset() {
